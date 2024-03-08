@@ -1,0 +1,3 @@
+FROM nginx:1.21.1-alpine  
+# 常に最新版にしたい場合はnginx:latest
+# Alpine Linuxはubuntuより軽量なため今回採用

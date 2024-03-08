@@ -1,0 +1,6 @@
+FROM mysql:8.0
+
+COPY ./my.cnf /etc/mysql/conf.d/my.cnf
+RUN chmod 644 /etc/mysql/conf.d/my.cnf
+# Windows環境でボリュームマウントを行うと、ファイルパーミッションが777となる。
+# - my.cnf に書き込み権限が付いてるとMySQLの起動時にエラーが発生するので権限を変更します。
